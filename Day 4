@@ -1,0 +1,466 @@
+1. Database (DB)
+
+
+Definition:
+
+A database is a place where data is stored in an organized way so that we can save, find, update, and delete information easily.
+
+A database is an organized collection of data that allows us to store, retrieve, update, and manage information efficiently
+
+
+Example: A school register stores students' names, roll numbers, and marks.
+
+
+
+2. Postman
+
+
+Definition:
+
+Postman is a tool used to test APIs without writing a frontend or full application.
+
+Postman is a tool used to send API requests and check the responses for testing and development.
+
+
+Example: Instead of creating a login page, you can use Postman to send a username and password directly to the API and see the response.
+
+
+3. HTTP Methods
+
+
+GET
+
+
+Used to fetch or read data from the server.
+
+
+Example: Get all students.
+
+
+POST
+
+
+Used to add new data.
+
+
+Example: Add a new student.
+
+
+PUT
+
+
+Used to replace all the existing data of a record.
+
+
+Example: Update all student details.
+
+
+PATCH
+
+
+Used to update only specific fields.
+
+
+Example: Change only a student's phone number.
+
+
+DELETE
+
+
+Used to remove data.
+
+
+Example: Delete a student record.
+
+
+
+GET → Read
+
+
+POST → Create
+
+
+PUT → Replace entire record
+
+
+PATCH → Update part of record
+
+
+DELETE → Remove
+
+
+
+4. HTTP Request
+
+
+Definition:
+
+An HTTP request is a message sent from a client (browser, app, or Postman) to a server asking it to do something.
+
+An HTTP request is a message sent by a client to a server to request or send data.
+
+
+Example: When you open Instagram:
+
+
+Your phone sends an HTTP request.
+
+
+The server sends an HTTP response.
+
+
+5. HTTP & HTTPS
+
+
+HTTP-HyperText Transfer Protocol.
+
+
+Transfers data between client and server.
+
+
+Data is not encrypted.
+
+
+Less secure.
+
+
+HTTPS - HyperText Transfer Protocol Secure.
+
+
+Secure version of HTTP.
+
+
+Data is encrypted.
+
+
+More secure.
+
+
+
+HTTP → Not Secure
+
+
+HTTPS → Secure
+
+
+HTTP is a protocol used to transfer data between a client and a server, while HTTPS is the secure version of HTTP that encrypts the data to keep it safe.
+
+
+6. WebSocket
+
+
+Definition:
+
+A WebSocket is a technology that creates a continuous, two-way connection between the client and the server.
+
+
+Example: Like a phone call where both people can talk anytime.
+
+
+Key Points
+
+
+1. Used for real-time communication.
+
+2. Creates a continuous connection.
+
+3. Two-way (bidirectional) communication.
+
+4. Client and server can send data anytime.
+
+5. Faster than repeatedly sending HTTP requests.
+
+6. Used in:
+
+
+I. Chat applications
+
+
+II. Online games
+
+
+III. Live sports
+
+
+IV. Stock market
+
+
+V. Notifications
+
+
+WebSocket is a protocol that enables a continuous, two-way connection between a client and a server for real-time communication.
+
+
+7. API Endpoint
+
+
+Definition:
+
+An endpoint is the URL where an API receives requests and sends responses.
+
+
+Examples
+
+
+GET /students
+
+
+POST /students
+
+
+GET /students/1
+
+
+DELETE /students/1
+
+
+Key Points
+
+
+1. API address (URL)
+
+2. Client sends requests here.
+
+3. Server processes request.
+
+4. Different endpoints perform different tasks.
+
+5. Used with GET, POST, PUT, PATCH, DELETE.
+
+
+An endpoint is the URL of an API where a client sends requests to access or modify data.
+
+
+8. Database (DB) & DBMS
+
+
+Database
+
+
+Stores data in an organized way.
+
+
+Example: Student database.
+
+
+DBMS
+
+
+Software used to create, store, update, retrieve, and manage databases.
+
+Examples:
+
+
+MySQL
+
+Oracle
+
+SQL Server
+
+PostgreSQL
+
+
+
+Difference
+
+
+Database
+
+Stores data.
+
+
+
+DBMS
+
+Manages the database.
+
+
+A database is an organized collection of data, while a DBMS is software used to create, store, retrieve, update, and manage that data.
+
+
+9. Thread Operations
+
+
+Definition:
+
+Thread operations are actions used to control the execution of a thread.
+
+
+Operations
+
+
+start() Starts a new thread.
+
+
+run() Contains the code executed by the thread.
+
+
+sleep() Pauses the thread.
+
+
+join() Waits for another thread to finish.
+
+
+yield() Gives another thread a chance to execute.
+
+
+interrupt() Requests a thread to stop or wake up.
+
+
+isAlive() Checks whether a thread is running.
+
+
+Thread operations are methods used to control a thread's execution, such as starting, pausing, waiting, interrupting, and checking its status.
+
+
+10. WHERE & HAVING
+
+
+WHERE
+
+
+Filters rows before grouping.
+
+
+Example
+
+
+SELECT * FROM Students
+
+WHERE age > 18;
+
+
+HAVING
+
+
+Filters grouped data after GROUP BY.
+
+
+Example
+
+
+SELECT department, COUNT(*)
+
+FROM Employees
+
+GROUP BY department
+
+HAVING COUNT(*) > 5;
+
+
+Difference
+
+
+WHERE
+
+
+Filters rows.
+
+
+Before GROUP BY.
+
+
+Cannot use aggregate functions.
+
+
+
+HAVING
+
+
+Filters groups.
+
+
+After GROUP BY.
+
+
+Can use COUNT(), SUM(), AVG(), etc.
+
+
+
+Easy Remember
+
+
+WHERE → Rows
+
+
+HAVING → Groups
+
+
+WHERE filters rows before grouping, while HAVING filters grouped results after GROUP BY.
+
+
+11. CASE & IF
+
+
+CASE
+
+
+Used to check multiple conditions.
+
+
+Example
+
+
+SELECT name,
+
+CASE
+
+WHEN marks >= 50 THEN 'Pass'
+
+ELSE 'Fail'
+
+END AS Result
+
+FROM Students;
+
+
+IF
+
+
+Used to check one condition.
+
+
+Example (MySQL)
+
+
+SELECT name,
+
+IF(marks >= 50, 'Pass', 'Fail') AS Result
+
+FROM Students;
+
+
+Difference
+
+
+CASE
+
+
+Multiple conditions.
+
+
+Standard SQL.
+
+
+Best for complex logic.
+
+
+IF
+
+
+Single condition.
+
+
+Mostly MySQL.
+
+
+Best for simple true/false conditions.
+
+
+CASE → Multiple conditions
+
+
+IF → One condition
+
+
+CASE is used to handle multiple conditions, while IF is used to evaluate a single condition and return one of two values.

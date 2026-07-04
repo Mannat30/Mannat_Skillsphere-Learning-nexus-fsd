@@ -1,0 +1,265 @@
+Day 2 – JWT Authentication
+
+JWT (JSON Web Token)
+
+JWT stands for JSON Web Token.
+
+It is a secure token used for authentication and authorization between a client (browser/mobile app) and a server.
+
+After a user logs in successfully, the server generates a JWT token and sends it to the client. The client stores this token and sends it with every request to prove its identity.
+
+Authentication
+
+Authentication means verifying who the user is.
+
+Example:
+
+· User enters email and password.
+
+· Server checks whether the credentials are correct.
+
+· If valid, the server generates a JWT token.
+
+· The client uses this token for future requests.
+
+Authorization
+
+Authorization means checking what the authenticated user is allowed to access.
+
+Example:
+
+· An Admin can add or delete users.
+
+· A Normal User can only view their own data.
+
+JWT helps identify the user so the server can decide what actions are permitted.
+
+Encryption
+
+Encryption is the process of converting readable data into an unreadable format to keep it secure.
+
+Only someone with the correct key can decrypt and read the original data.
+
+Example:
+
+Original Data
+
+Hello
+
+
+Encrypted Data
+
+A8kL9@#xP
+
+Decryption
+
+Decryption is the process of converting encrypted data back into its original readable form.
+
+Example:
+
+Encrypted Data
+
+A8kL9@#xP
+
+Decrypted Data
+
+Hello
+
+Hashing
+
+Hashing converts data into a fixed-length value called a hash.
+
+Unlike encryption, hashing cannot be reversed.
+
+It is mainly used for storing passwords securely in the database.
+
+Example:
+
+Password
+
+admin123
+
+Hashed Password
+
+$2a$10$H4k3...
+
+When a user logs in:
+
+· The entered password is hashed.
+
+· The server compares it with the stored hashed password.
+
+· If both hashes match, the user is authenticated.
+
+
+JWT Authentication Flow
+
+User Login
+
+▼
+
+Enter Email & Password
+
+▼
+
+Server verifies credentials
+
+▼
+
+JWT Token Generated
+
+▼
+
+Token sent to Client
+
+▼
+
+Client stores Token
+
+▼
+
+Client sends Token with every request
+
+▼
+
+Server validates Token
+
+▼
+
+Access Granted
+
+
+JWT Structure
+
+A JWT consists of three parts separated by dots (.).
+
+Header.Payload.Signature
+
+Example:
+
+eyJhbGciOiJIUzI1NiJ9.
+
+eyJzdWIiOiJyYWh1bEBnbWFpbC5jb20ifQ.
+
+abcxyz123signature
+
+1. Header
+
+Contains information about the token.
+
+Example:
+
+{
+
+"alg": "HS256",
+
+"typ": "JWT"
+
+}
+
+· alg → Algorithm used
+
+· typ → Token type
+
+2. Payload
+
+Contains the user information (claims).
+
+Example:
+
+{
+
+"username": "rahul@gmail.com",
+
+"role": "USER"
+
+}
+
+The payload is the data that the backend stores inside the token.
+
+Note: Do not store passwords or sensitive information in the payload because anyone can decode it.
+
+3. Signature
+
+The signature is created using:
+
+· Header
+
+· Payload
+
+· Secret Key
+
+It ensures that the token has not been modified.
+
+JWT Utility Class
+
+A utility class contains helper methods for creating and validating JWT tokens.
+
+public class JwtUtil {
+
+
+// Generate JWT Token
+
+public String generateToken(String username) {
+
+...
+
+}
+
+// Extract username from token
+
+public String extractUsername(String token) {
+
+...
+
+}
+
+// Validate JWT Token
+
+public boolean validateToken(String token) {
+
+...
+
+}
+
+}
+
+Generate Token
+
+String token = jwtUtil.generateToken("rahul@gmail.com");
+
+This method creates a JWT token for the given user after a successful login.
+
+Extract Username
+
+String username = jwtUtil.extractUsername(token);
+
+This method reads the username stored inside the token.
+
+Validate Token
+
+boolean valid = jwtUtil.validateToken(token);
+
+This method checks:
+
+· Whether the token is valid.
+
+· Whether the token has expired.
+
+· Whether the signature is correct.
+
+If all checks pass, it returns true; otherwise, it returns false.
+
+Common JWT Classes in Spring Boot
+
+JwtService
+
+Contains the business logic for generating and validating JWT tokens.
+
+JwtUtil
+
+A helper (utility) class that provides methods to create, read, and validate JWT tokens.
+
+JwtTokenProvider
+
+Responsible for generating JWT tokens and extracting user information. In many projects, it performs a similar role to JwtUtil.

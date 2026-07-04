@@ -1,0 +1,237 @@
+Day 3 – Git Commands
+
+
+1. git init
+
+Definition: Creates a new Git repository in the current folder by initializing Git tracking.
+
+Example:
+
+git init
+
+
+2. git clone
+
+Definition: Copies an existing remote repository from GitHub (or another Git server) to your local machine.
+
+Example:
+
+git clone https://github.com/user/project.git
+
+
+3. git status
+
+Definition: Shows the current state of the repository, including modified, staged, and untracked files.
+
+Example:
+
+git status
+
+
+4. git add
+
+Definition: Adds files to the staging area so they can be included in the next commit.
+
+Example:
+
+git add index.html
+
+Or add all files:
+
+git add .
+
+
+5. git commit
+
+Definition: Saves the staged changes as a snapshot in the Git history.
+
+Example:
+
+git commit -m "Added login page"
+
+
+6. git log
+
+Definition: Displays the history of commits made in the repository.
+
+Example:
+
+git log
+
+
+7. git diff
+
+Definition: Shows the differences between the current files and the last committed version.
+
+Example:
+
+git diff
+
+
+8. git branch
+
+Definition: Lists existing branches or creates a new branch.
+
+Example (List branches):
+
+git branch
+
+Example (Create a branch):
+
+git branch feature-login
+
+
+9. git branch -a
+
+Definition: Displays all local and remote branches.
+
+Example:
+
+git branch -a
+
+
+10. git checkout
+
+Definition: Switches to another branch or restores files.
+
+Example:
+
+git checkout feature-login
+
+
+11. git switch
+
+Definition: A modern command used to switch between branches.
+
+Example:
+
+git switch feature-login
+
+
+12. git remote
+
+Definition: Shows the remote repositories connected to your local repository.
+
+Example:
+
+git remote -v
+
+
+13. git fetch
+
+Definition: Downloads the latest changes from the remote repository without merging them.
+
+Example:
+
+git fetch
+
+
+14. git fetch --all
+
+Definition: Fetches updates from all configured remote repositories.
+
+Example:
+
+git fetch --all
+
+
+15. git pull
+
+Definition: Downloads and automatically merges changes from the remote repository into the current branch.
+
+Example:
+
+git pull origin main
+
+
+16. git push
+
+Definition: Uploads your local commits to the remote repository.
+
+Example:
+
+git push origin main
+
+
+17. git merge
+
+Definition: Combines changes from one branch into the current branch.
+
+Example:
+
+git merge feature-login
+
+
+18. git rebase
+
+Definition: Moves your branch commits on top of another branch to create a cleaner commit history.
+
+Example:
+
+git rebase main
+
+
+19. git stash
+
+Definition: Temporarily saves uncommitted changes without committing them.
+
+Example:
+
+git stash
+
+Restore the changes:
+
+git stash pop
+
+
+20. git reset
+
+Definition: Moves the current branch to a previous commit and can remove staged changes.
+
+Example:
+
+git reset HEAD~1
+
+
+21. git revert
+
+Definition: Creates a new commit that reverses the changes made by an earlier commit.
+
+Example:
+
+git revert abc1234
+
+
+22. git tag
+
+Definition: Creates a version label for a specific commit, often used for releases.
+
+Example:
+
+git tag v1.0
+
+
+23. git clean
+
+Definition: Removes untracked files and folders from the working directory.
+
+Example:
+
+git clean -f
+
+
+24. git fork
+
+Definition: A fork is a copy of another person's GitHub repository created under your own GitHub account. It allows you to make changes without affecting the original repository.
+
+Example:
+
+1. Open the repository on GitHub.
+
+2. Click the Fork button.
+
+3. A copy of the repository is created in your GitHub account.
+
+4. Clone your fork:
+
+git clone https://github.com/yourusername/project.git`

@@ -1,0 +1,192 @@
+1. SDLC (Software Development Life Cycle)
+
+Definition: A step-by-step process used to develop software.
+
+Phases:
+
+1. Requirement Gathering
+
+· Collect and understand the client's requirements.
+
+· Prepare a document of all project requirements.
+
+2. Planning
+
+· Estimate project cost, time, resources, and risks.
+
+· Create the project plan.
+
+3. Design
+
+· Design the software architecture, database, and user interface.
+
+· Acts as a blueprint for development.
+
+4. Development (Coding)
+
+· Developers write the source code based on the design.
+
+· Build all required features.
+
+5. Testing
+
+· Check the software for bugs and errors.
+
+· Ensure it works correctly before release.
+
+6. Deployment
+
+· Release the software to users.
+
+· Install it on the production server.
+
+7. Maintenance
+
+· Fix bugs, improve performance, and add new features after deployment.
+
+
+2. Functional Specification Document (FSD)
+
+Definition: A document that describes the functional requirements, features, and expected behavior of the software.
+
+Purpose:
+
+Guides developers and testers.
+
+
+3. Unit Testing
+
+Definition: Testing a single unit (method/function/class) of a program to ensure it works correctly.
+
+Key Points:
+
+Performed by developers.
+
+Finds bugs early.
+
+Example tool: JUnit (Java).
+
+
+4. Software Environments (Servers)
+
+Development (Dev)
+
+Developers write and test code.
+
+New features are created here.
+
+Quality (QA/Test)
+
+Testers check the application for bugs.
+
+Ensures the software works correctly.
+
+Production (Prod)
+
+Live environment.
+
+Used by real users.
+
+Flow:
+
+Dev → QA → Production
+
+5. IT Team Roles
+
+Business Analyst (BA): Collects customer requirements.
+
+Project Manager (PM): Manages the project.
+
+Product Manager: Decides product features and vision.
+
+Developer: Writes code.
+
+UI/UX Designer: Designs the user interface.
+
+QA Tester: Tests the software.
+
+Database Administrator (DBA): Manages databases.
+
+DevOps Engineer: Handles deployment and servers.
+
+System Administrator: Manages systems and networks.
+
+Technical Support Engineer: Supports users after release.
+
+
+6. Project Manager vs Product Manager
+
+Project Manager
+
+Manages the project.
+
+Focuses on time, budget, and resources.
+
+Ensures the project is completed successfully.
+
+Product Manager
+
+Manages the product.
+
+Decides features and product direction.
+
+Focuses on customer needs.
+
+
+7. Waterfall Model
+
+Definition: A linear software development model where each phase is completed before the next begins.
+
+Flow: Requirement → Design → Development → Testing → Deployment → Maintenance
+
+Advantages:
+
+Simple
+
+Easy to manage
+
+Good for fixed requirements
+
+Disadvantages:
+
+Changes are difficult
+
+Customer feedback comes late
+
+
+8. Agile Model
+
+Definition: A software development model where the project is developed in small iterations (sprints) with continuous feedback.
+
+Process: Plan → Design → Develop → Test → Review → Repeat
+
+Advantages:
+
+Easy to make changes
+
+Faster delivery
+
+Continuous customer feedback
+
+Disadvantages:
+
+Requires frequent communication
+
+Time and cost estimation can be challenging
+
+
+9. Waterfall vs Agile
+
+Waterfall Agile
+
+Sequential process Iterative process
+
+Fixed requirements Changing requirements
+
+Testing at the end Continuous testing
+
+Less customer
+
+involvement High customer involvement
+
+Changes are difficult Changes are easy.
